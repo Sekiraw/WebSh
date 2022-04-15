@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Horgaszbolt</string>
+    <string name="name">Név</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="user_name">Felhasználónév</string>
+    <string name="email_address">E-mail cím</string>
+    <string name="password_again">Jelszó megerősítése</string>
+    <string name="cancel">Mégse</string>
+    <string name="phone_number">Telefonszám</string>
+    <string name="address">Cím</string>
+    <string name="account_type">Fiók típusa</string>
+    <string name="customer">Vásárló</string>
+    <string name="seller">Eladó</string>
+    <string name="product_description">Termék leírása.</string>
+
+    <string name="title_placeholder">Title</string>
+    <string name="item_placeholder">Leírás</string>
+    <string name="item_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor diam fringilla tellus, eu euismod mauris neque at neque.</string>
+    <string name="to_cart">Kosárba</string>
+    <string name="delete">Törlés</string>
+    <string name="darab">Darab</string>
+    <string name="del_from_cart">Törlés a kosárból</string>
+    <string name="sum">Összeg</string>
+
+    <string-array name="phone_labels">
+        <item>Otthon</item>
+        <item>Munkahely</item>
+        <item>Mobil</item>
+        <item>Egyéb</item>
+    </string-array>
+
+    <string-array name="idk">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="shopping_item_names">
+        <item>Kezdő horgász szett</item>
+        <item>Horgász bot kiegészítőkkel</item>
+        <item>Kezdő horgász felszerelés</item>
+        <item>Lebegő csali</item>
+        <item>Lebegő csali</item>
+        <item>Háló</item>
+        <item>Horgász szák</item>
+        <item>Horgász póló</item>
+        <item>Horgász sapka</item>
+        <item>Horgász sátor</item>
+    </string-array>
+
+    <string-array name="shopping_item_desc">
+        <item>Ha szeretnéd kipróbálni a horgászást, ezt a szettet neked találták ki! Minden szükséges kiegészítőt tartalmaz, a komplett szettet a hozzá tartozó műanyag dobozban könnyedén magaddal viheted!
+A horgászbot karbonszálas, így rendkívül merev, jól terhelhető, súlya pedig minimális. A 3:3:1 áttételezésű orsó szerszámok nélkül rögzíthető a botra. Nyelét neoprén anyaggal vonták be, így kényelmes fogást biztosít még hideg időben is.</item>
+        <item>Strapabíró anyagok felhasználásával készült horgászbot, mely optimális választás mind a behordásos, mind a partról történő bojlis horgászatokhoz. A bottest közepesen lágy, ugyanakkor kellőképpen erős az agresszívebb fárasztáshoz is.</item>
+        <item>Ha szeretnéd kipróbálni a horgászást, ezt a szettet neked találták ki! Minden szükséges kiegészítőt tartalmaz, a komplett szettet a hozzá tartozó műanyag dobozban könnyedén magaddal viheted!
+A horgászbot karbonszálas, így rendkívül merev, jól terhelhető, súlya pedig minimális. A 3:3:1 áttételezésű orsó szerszámok nélkül rögzíthető a botra. Nyelét neoprén anyaggal vonták be, így kényelmes fogást biztosít még hideg időben is.</item>
+        <item>Megkérdőjelezhetetlen, hogy a lebegő vagy kikönnyített „hóember”csalik a legtöbb horgászat során fogósabbaknak bizonyulnak, mint a fenéken fekvők, így egyetlen pontyhorgász táskájából sem hiányozhatnak.</item>
+        <item>Megkérdőjelezhetetlen, hogy a lebegő vagy kikönnyített „hóember”csalik a legtöbb horgászat során fogósabbaknak bizonyulnak, mint a fenéken fekvők, így egyetlen pontyhorgász táskájából sem hiányozhatnak.</item>
+        <item>Mikado Intro Carp Net bolis merítőháló. Kedvező árú nagyhalas merítő, melybe gond nélkül beleférnek a kapitális pontyok, amúrok.</item>
+        <item>A horgászat eléggé sok időt vesz igénybe még akkor is, ha csak egy rapid pecára szeretnénk kimenni. Ezt az időt a hobbinkkal foglalkozva szeretnénk tölteni méghozzá a lehető legnagyobb kényelemben. </item>
+        <item>Pólóink 100 % pamutból készültek. A nyomtatott rész rendkívül tartós nyomtatással van a póló textil anyagába nyomtatva.  A pólót 40 °C -fokon kell tisztítani és kifordítva vasalni. Színe nem fakul, mosásnál tartja a méretét. </item>
+        <item>Olaszországban készült
+100% pamut külső, bélés és karima
+Vízálló, mégis könnyű anyaga van</item>
+        <item>D.A.M MAD PONTYOZÓ SÁTOR 2 SZEM HABITAT. A "hatalmas" az első szó, amely eszünkbe jut, mikor először meglátjuk felállítva a sátrat. A sátor mérete valóban lenyűgöző 1,95m magas, 3,95m*3,20m alapterületű így még a nagy méretű ágyak is könnyedén elférnek benne, a csomagoknak, felszereléseknek is hagyva helyet.</item>
+    </string-array>
+
+    <array name="shopping_item_rates">
+        <item>3.5</item>
+        <item>5</item>
+        <item>4</item>
+        <item>1.5</item>
+        <item>5</item>
+        <item>3</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+    </array>
+
+    <array name="shopping_item_images">
+        <item>@drawable/horgasz1</item>
+        <item>@drawable/horgasz2</item>
+        <item>@drawable/horgasz3</item>
+        <item>@drawable/horgasz4</item>
+        <item>@drawable/horgasz5</item>
+        <item>@drawable/horgasz6</item>
+        <item>@drawable/horgasz7</item>
+        <item>@drawable/horgasz8</item>
+        <item>@drawable/horgasz9</item>
+        <item>@drawable/horgasz10</item>
+    </array>
+
+    <array name="shopping_item_price">
+        <item>14.990 Ft</item>
+        <item>19.990 Ft</item>
+        <item>17.890 Ft</item>
+        <item>2.290 Ft</item>
+        <item>1.490 Ft</item>
+        <item>11.990 Ft</item>
+        <item>25.990 Ft</item>
+        <item>3.990 Ft</item>
+        <item>5.490 Ft</item>
+        <item>27.990 Ft</item>
+    </array>
+</resources>
