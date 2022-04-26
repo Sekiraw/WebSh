@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,18 +15,14 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -47,7 +44,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 
     private TextView addressText;
     private TextView emailText;
-    private EditText addressEditText;
+    private EditText addressEditTextNew;
 
     private String address;
 
@@ -60,18 +57,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 
         addressText = (TextView)findViewById(R.id.addressText);
         emailText = (TextView)findViewById(R.id.emailText);
-        addressEditText = findViewById(R.id.addressEditText);
+        addressEditTextNew = findViewById(R.id.addressEditText);
 
         mFirestore = FirebaseFirestore.getInstance();
         mDatabase = mFirestore.collection("Addresses");
         mDBRef = mFirestore.collection("Addresses").document(getUserId());
-
-        spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.idk, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
 
         if(getUserEmail() != null){
             getStuff();
@@ -131,40 +121,42 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
                                 String cim = document.getString("address");
                                 String email = document.getString("email");
 
-                                cim = addressEditText.getText().toString();
+                                // Set the address to the new address if not empty
+                                Log.d(LOG_TAG, String.valueOf(addressEditTextNew.getText().toString().length()));
+                                if(addressEditTextNew.getText().toString().length() > 0)
+                                {
+                                    cim = addressEditTextNew.getText().toString();
 
-                                Map<String, Object> data = new HashMap<>();
-                                data.put("email", email);
-                                data.put("address", cim);
+                                    // Store data
+                                    Map<String, Object> data = new HashMap<>();
+                                    data.put("email", email);
+                                    data.put("address", cim);
 
-                                mFirestore.collection("Addresses")
-                                        .add(data);
+                                    // Szoval a törlés nem sikerül sehogy, ezért mivel a firestore a címet alapból dátum szerint kéri ezért mindig a legfrissebbet fogja a querry megkapni
+                                    // Plusz feature, a régiek is el lesznek mentve
+                                    // Delete existing data here
 
-                                Log.d(LOG_TAG, "Sikeres cím változtatás");
+                                    mFirestore.collection("Addresses")
+                                            .add(data);
+
+                                    Log.d(LOG_TAG, "Sikeres cím változtatás!");
+                                }
+                                else {
+                                    Log.d(LOG_TAG, "Üres címre nem változtathatom.");
+                                }
                             }
                         }
                         else {
-                            Log.w(LOG_TAG, "Sikertelen cím változtatás");
+                            Log.w(LOG_TAG, "Sikertelen cím változtatás!");
                         }
                     }
                 });
-//        mDBRef.update("address", addressEditText.toString())
-//                .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                    @Override
-//                    public void onSuccess(Void aVoid) {
-//                        Log.d(LOG_TAG, "Sikeres cím változtatás");
-//                    }
-//                })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        Log.w(LOG_TAG, "Sikertelen cím változtatás", e);
-//                    }
-//                });
 
     }
 
     public void cancel(View view) {
+        Intent intent_logout = new Intent(this, ShopListActivity.class);
+        startActivity(intent_logout);
         finish();
     }
 

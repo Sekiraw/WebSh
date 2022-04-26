@@ -13,7 +13,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
@@ -36,6 +39,8 @@ public class CartActivity extends AppCompatActivity implements AdapterView.OnIte
     private TextView countTextView;
 
     private NotificationHandler mNotificationHandler;
+
+    private Button button;
 
     Spinner spinner;
     RadioGroup accountTypeGroup;
@@ -82,9 +87,18 @@ public class CartActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Log.d(LOG_TAG, getUserEmail() + " email");
 
-        queryData();
-        //initializeData();
+        // Gomb animáció
+        button = (Button)findViewById(R.id.checkout);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(CartActivity.this, R.anim.bounce);
+                button.startAnimation(animation);
+            }
+        });
+
+        queryData();
     }
 
     public String getUserId() {

@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/itemImage"
             android:padding="8dp"
-            android:text="@string/item_placeholder"
+            android:text="title"
             android:textColor="?android:textColorSecondary" />
 
         <RatingBar
@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/itemTitle"
-            android:padding="8dp"
-            android:isIndicator="true" />
+            android:isIndicator="true"
+            android:padding="8dp" />
 
         <TextView
             android:id="@+id/subTitle"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ratingBar"
             android:padding="8dp"
-            android:text="@string/item_info_placeholder" />
+            android:text="content" />
 
         <TextView
             android:id="@+id/price"
@@ -52,15 +52,6 @@
             android:padding="8dp"
             android:textColor="@color/red"
             android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/db"
-            style="@style/ItemDetailText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/price"
-            android:padding="8dp"
-            android:text="@string/darab" />
 
         <LinearLayout
             android:layout_width="wrap_content"

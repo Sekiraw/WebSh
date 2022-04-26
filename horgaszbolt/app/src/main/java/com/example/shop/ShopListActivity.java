@@ -24,6 +24,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -391,6 +394,12 @@ public class ShopListActivity extends AppCompatActivity {
 
         mJobScheduler.schedule(builder.build());
         //mJobScheduler.cancel(0);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(LOG_TAG, "settings onRestart");
     }
 
     public ArrayList<ShoppingItem> getmItemsData() {

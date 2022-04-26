@@ -112,7 +112,7 @@ public class CartItemAdapter
         private TextView mPriceText;
         private ImageView mItemImage;
         private RatingBar mRatingBar;
-        private TextView mDarab;
+        //private TextView mDarab;
         private TextView mSum;
 
         ViewHolder(View itemView) {
@@ -124,7 +124,7 @@ public class CartItemAdapter
             mItemImage = itemView.findViewById(R.id.itemImage);
             mRatingBar = itemView.findViewById(R.id.ratingBar);
             mPriceText = itemView.findViewById(R.id.price);
-            mDarab = itemView.findViewById(R.id.db);
+            //mDarab = itemView.findViewById(R.id.db);
             // mSum = itemView.findViewById(R.id.sum);
         }
 
