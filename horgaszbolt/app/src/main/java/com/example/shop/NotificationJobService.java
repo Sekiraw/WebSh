@@ -11,7 +11,7 @@ public class NotificationJobService extends JobService {
     @Override
     public boolean onStartJob(JobParameters jobParameters) {
         new NotificationHandler(getApplicationContext())
-                .send("Its time");
+                .send("");
         return false;
     }
 

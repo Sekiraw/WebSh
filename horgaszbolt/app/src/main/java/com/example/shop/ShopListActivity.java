@@ -347,7 +347,7 @@ public class ShopListActivity extends AppCompatActivity {
                     Toast.makeText(this, "Item " + item._getId() + " cannot be changed.", Toast.LENGTH_LONG).show();
                 });
 
-        mNotificationHandler.send(item.getName());
+        mNotificationHandler.send(item.getName() + "a kosárhoz adva");
         setCartIcon();
         queryData();
     }
@@ -363,6 +363,8 @@ public class ShopListActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(powerReceiver);
+        // Ha kilépünk innen 15 perc utén küld egy értesítést
+        setAlarmManager();
     }
 
     private void setAlarmManager() {
