@@ -6,7 +6,7 @@ Ha nem emulátorral tesztelsz akkor légyszi emulátorral tesztelj, mert physica
 
 Bármi kérdésed van v2020.bohus.peter@gmail.com -on elérhető vagyok.
 
-Fordítási hiba nincs	1	nincs	done
+Fordítási hiba nincs	1	done
 
 Futtatási hiba nincs 1	done
 
