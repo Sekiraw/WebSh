@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "407487468186",
+    "project_id": "androidboltom",
+    "storage_bucket": "androidboltom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407487468186:android:81c5b5f91eb56d49cd8523",
+        "android_client_info": {
+          "package_name": "com.example.shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407487468186-dog6ns5gf9prnmrj2fb6ui1ok8rvuskg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop",
+            "certificate_hash": "147aa1b816adda4f06da61934c6b2b2ec541069e"
+          }
+        },
+        {
+          "client_id": "407487468186-t4lpka4ifhd4h8k2pb2am904jstjno8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3ILIle3G_1JSCd1KzWtfQKRQyFN_z19E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407487468186-t4lpka4ifhd4h8k2pb2am904jstjno8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
